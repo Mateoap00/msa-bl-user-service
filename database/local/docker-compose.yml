@@ -1,0 +1,20 @@
+services:
+  postgresdb:
+    container_name: dbintegration
+    image: postgres:13
+    environment:
+      POSTGRES_DB: testdb
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test.123
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - catolica:/var/lib/postgresql/catolica
+    ports:
+      - 5432:5432
+
+volumes:
+  catolica:
+
+networks:
+  default:
+    driver: bridge

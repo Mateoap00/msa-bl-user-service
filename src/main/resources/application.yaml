@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: ${ENVIRONMENT_PROFILE:local}
+  application:
+    name: msa-bl-user-service
