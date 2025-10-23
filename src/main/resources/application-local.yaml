@@ -1,2 +1,22 @@
 server:
   port: 8070
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/testdb}
+    username: ${SPRING_DATASOURCE_USERNAME:test}
+    password: ${SPRING_DATASOURCE_PASSWORD:test.123}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: SpringHikariCP
+      auto-commit: true
+      connection-timeout: 300
+      maximum-pool-size: 10
