@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users-table
+      author: jeremycarvajal.2003@gmail.com
+      changes:
+        - createTable:
+            tableName: t_users
+            columns:
+              - column:
+                  name: usr_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    primaryKeyName: usr_id_pkey
+              - column:
+                  name: usr_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: usr_age
+                  type: number
+                  constraints:
+                    nullable: false
