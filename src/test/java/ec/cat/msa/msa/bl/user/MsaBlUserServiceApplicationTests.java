@@ -1,4 +1,4 @@
-package ec.cat.msa.msa.bl.user.service;
+package ec.cat.msa.msa.bl.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
